@@ -1,3 +1,5 @@
 name: surf-attack
 url: https://ultrasound-12.github.io
 title: Surf Attack
+
+theme: jekyll-theme-slate
