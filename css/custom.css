@@ -208,5 +208,11 @@ a:active {
 			.myButton:hover {
 				background-color:#478fcc;
 				color:#ffffff;
-
+			}
+			
+			.img {
+				  float: left;
+				  width: 100px;
+				  height: 100px;
+				  background: #555;
 			}
