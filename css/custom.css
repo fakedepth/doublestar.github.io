@@ -209,3 +209,9 @@ a:active {
 				background-color:#478fcc;
 				color:#ffffff;
 			}
+			.section logoo {
+			  float: left;
+			  width: 100px;
+			  height: 100px;
+			  background: #555;
+			}
