@@ -211,7 +211,7 @@ a:active {
 			}
 			
 			.img {
-				  float: left;
+				  float: right;
 				  width: 100px;
 				  height: 100px;
 				  background: #555;
