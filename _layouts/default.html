@@ -92,16 +92,24 @@ conditions. </p>
 				
 				<h3>Attack Forward Vison Sensors at Night</h3>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/3E081NT3VT8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div>
+				<div>
 				<h3>Attack Backward Vison Sensors during the Daytime</h3>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/VaRDQQMxnXk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<div>
-				<h3>Drone Attack Verification</h3>
+				<h3>Drone Attack Verification</h3>					
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/wYsgPsVNVrw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<div>
+				<h3>Aiming the Drone in Real-Time Attack</h3>
+				<p>Since the minor change of the lens
+angle can cause a significant light coverage difference on the
+victim side, the attacker can easily track the flying drone by
+continuously controlling the aiming angle of the taped lens.
+As long as the projection light is injected to the stereo camera,
+DoubleStar can always succeed.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/3HKP3rBBoPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 				<h1>Simulation</h1>
 				<h2>Simulation Workflow of DoubleStar</h2>
-					<p> we simulate DoubleStar drone attacks using Ardupilot and AirSim. Ardupilot is used for simulating MAVProxy as the ground station, and ArduCopter as the drone. AirSim provides the sensor inputs to the ArduCopter. The user first sends commands to ArduCopter via MAVProxy. Next, ArduCopter sends its states to Airsim, which provides a simulated environment. After that, AirSim sends the sensor inputs back to ArduCopter, and the drone’s OA system processes the received data and makes the flying decisions to avoid the obstacles. </p> 
+					<p> We simulate DoubleStar drone attacks using Ardupilot and AirSim. Ardupilot is used for simulating MAVProxy as the ground station, and ArduCopter as the drone. AirSim provides the sensor inputs to the ArduCopter. The user first sends commands to ArduCopter via MAVProxy. Next, ArduCopter sends its states to Airsim, which provides a simulated environment. After that, AirSim sends the sensor inputs back to ArduCopter, and the drone’s OA system processes the received data and makes the flying decisions to avoid the obstacles. </p> 
 				<div class ="boxed">
 				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
 					<div>
@@ -109,13 +117,40 @@ conditions. </p>
 					  <img width = "480px" src="Picture8.png" alt="Experiment Photos"  />
 					</a>
 					</div>
-			 </div>
+			 		</div>
 					</div>
 					
 					
-				<h2>DoubleStar Simulation Demo</h2>
+				<h2></h2>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/ue4LhXZVzSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<div>
+			<div>
+			<h1>Attack Visualization on Stereo Cameras</h1>
+				<p> DoubleStar includes two distinctive attack formats: beams attack and orbs attack, which leverage projected light beams and lens flare orbs respectively to cause false depth perception. We can visualize the two attacks through the stereo cameras.<\p>
+				<h2>Beams Attack</h2>
+				<p> An attacker injects the light beams with the same projection intensity using two projectors (\emph{i.e.,} $P$ and $Q$) into the right and left camera, respectively. It can be observed that one of the injected light sources is brighter than the other one when received by the camera, which becomes a more prominent feature in the image. 
+				Such phenomenon causes the depth estimation algorithms to mismatch the two highlighted light sources in the images as the same object due to the weakness in depth perception. As a result, a fake near-distance depth is created in the depth map and visualized in the 3D point cloud. By adjusting the distance between projectors and the stereo camera, as well as the distance between two projectors, different fake obstacle depths can be created.</p>	
+				<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "480px" src="Picture8.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>
+				<h2>Orbs Attack</h2>
+				<p> Two lens flare orbs generated by the strong light sources in the stereo images can mislead the depth perception to falsely identify them as a 3D obstacle.<\p>
+					<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "480px" src="Picture8.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>	
+					
+				<div>
 	
 	</body>
 </html>
