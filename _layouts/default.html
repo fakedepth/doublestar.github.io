@@ -34,13 +34,12 @@
 designed for autonomous systems (ZED and Intel RealSense D415).
 The visualization of fake depth perceived by the
 stereo cameras illustrates the false stereo matching induced by
-DoubleStar. We further use Ardupilot to simulate the attack
+DoubleStar. We use Ardupilot to simulate the attack
 and demonstrate its impact on drones. To validate the attack
 on real autonomous systems, we perform a real-world attack
-towards a commercial drone (DJI Phantom 4 Pro V2). Our attack can continuously and
-stealthily bring a flying drone to a sudden stop and generate
+towards a commercial drone (DJI Phantom 4 Pro V2). Our attack can bring a flying drone to a sudden stop or drift it away from its original path, and it can also cause
 false alarms over a long distance under various lighting
-conditions. </p>
+conditions. our experimental results show that DoubleStar creates fake depth up to 15 meters in distance at night and up to 8 meters during the daytime. DoubleStar attack may cause severe accidents, even loss of lives, if we trust the obstacle avoidance capability of autonomous systems. </p>
 					<img width = "800px" src="devices.png" alt="device">
 					<p style="font-size:20px"><a href="papers/"> </a>
 
@@ -71,11 +70,12 @@ conditions. </p>
 
 				<h1>DoubleStar Attack Demonstration</h1>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/FSPRW2ss82c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<h1>Drone Attack Demonstration</h1>	
-				
+
 				<h2>Drift Away and Shake Flying Drone (7m)</h2>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/BQtHnUNJgeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
-				
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/BQtHnUNJgeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+
+				<h1>More Attack Scenarios</h1>	
+						
 				<h2>Stop Flying Drone in the Day (6m)</h2>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/wVn6NhH5TdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				
@@ -142,7 +142,7 @@ conditions. </p>
 			 		</div>
 					</div>	
 				<h2>Attack Validation on RealSense</h2>
-				<p> A near-distancefake depth (around 0.5m) can be generated when the attack distance is 10m in RealSense. It demonstrates that DoubleStar remains effective even without the access to its left and right images.</p>
+				<p> A near-distance fake depth (around 0.5m) can be generated when the attack distance is 10m in RealSense. It demonstrates that DoubleStar remains effective even without the access to the camera's left and right images.</p>
 					<div class ="boxed">
 				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
 					<div>
